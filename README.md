@@ -11,7 +11,7 @@ This project is a web application for creating and managing invoices, built with
 ## Getting Started
 
 ### Prerequisites
-- Node.js (>= 14.x)
+- Node.js (>= 18.x)
 - Yarn or npm
 
 ### Installation
