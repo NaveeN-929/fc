@@ -31,6 +31,7 @@ const emptyForm = {
   email: "",
   billingAddress: "",
   mobileNo: "",
+  GST:"",
 };
 
 function QuickAddClient({ editForm }) {
@@ -110,6 +111,7 @@ function QuickAddClient({ editForm }) {
       email: isValidEmail ? true : false,
       billingAddress: clientForm?.billingAddress?.trim() ? true : false,
       mobileNo: clientForm?.mobileNo?.trim() ? true : false,
+      GST: clientForm?.GST?.trim() ? true : false,
     }));
   }, [clientForm]);
 
@@ -191,6 +193,26 @@ function QuickAddClient({ editForm }) {
               disabled={isInitLoading}
               value={clientForm.mobileNo}
               onChange={(e) => handlerClientValue(e, "mobileNo")}
+            />
+          )}
+        </div>
+        </div>
+      <div className="flex mt-2">
+        <div className="flex-1">
+          {isInitLoading ? (
+            <Skeleton className={defaultSkeletonNormalStyle} />
+          ) : (
+            <input
+              autoComplete="nope"
+              placeholder="GST"
+              className={
+                !validForm.GST && isTouched
+                  ? defaultInputInvalidStyle
+                  : defaultInputStyle
+              }
+              disabled={isInitLoading}
+              value={clientForm.GST}
+              onChange={(e) => handlerClientValue(e, "GST")}
             />
           )}
         </div>

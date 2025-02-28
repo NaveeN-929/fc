@@ -802,6 +802,23 @@ function InvoiceDetailScreen(props) {
                     invoiceForm?.clientDetail?.email
                   )}
                 </div>
+                <div
+                  className={
+                    "font-medium " + (isExporting ? "text-xs" : "text-sm mb-1")
+                  }
+                >
+                  {!isViewMode ? (
+                    <input
+                      autoComplete="nope"
+                      placeholder="Client GSTIN"
+                      className={defaultInputSmStyle}
+                      value={invoiceForm?.clientDetail?.gst}
+                      onChange={(e) => handlerInvoiceClientValue(e, "gst")}
+                    />
+                  ) : (
+                    invoiceForm?.clientDetail?.email
+                  )}
+                </div>
               </div>
             </div>
             <div className="flex-1">

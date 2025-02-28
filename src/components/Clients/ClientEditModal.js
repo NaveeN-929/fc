@@ -24,6 +24,7 @@ const emptyForm = {
   email: "",
   billingAddress: "",
   mobileNo: "",
+  gst: "",
 };
 
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -201,6 +202,23 @@ function ClientEditModal(props) {
                               value={clientForm.mobileNo}
                               onChange={(e) =>
                                 handlerClientValue(e, "mobileNo")
+                              }
+                            />
+                          </div>
+                          </div>
+                        <div className="flex mt-2">
+                          <div className="flex-1">
+                            <input
+                              autoComplete="nope"
+                              placeholder="gst"
+                              className={
+                                !validForm.gst && isTouched
+                                  ? defaultInputInvalidStyle
+                                  : defaultInputStyle
+                              }
+                              value={clientForm.gst}
+                              onChange={(e) =>
+                                handlerClientValue(e, "gst")
                               }
                             />
                           </div>
