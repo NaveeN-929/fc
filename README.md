@@ -1,6 +1,6 @@
 # Invoice Creation Web App
 
-This project is a web application for creating and managing invoices, built with React and bootstrapped using [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application for creating and managing invoices, built with React and bootstrapped using Create React App
 
 ## Features
 - Create and manage invoices easily
