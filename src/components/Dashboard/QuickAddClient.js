@@ -31,7 +31,7 @@ const emptyForm = {
   email: "",
   billingAddress: "",
   mobileNo: "",
-  GST:"",
+  GSTIN:"",
 };
 
 function QuickAddClient({ editForm }) {
@@ -111,7 +111,7 @@ function QuickAddClient({ editForm }) {
       email: isValidEmail ? true : false,
       billingAddress: clientForm?.billingAddress?.trim() ? true : false,
       mobileNo: clientForm?.mobileNo?.trim() ? true : false,
-      GST: clientForm?.GST?.trim() ? true : false,
+      GSTIN: clientForm?.GSTIN?.trim() ? true : false,
     }));
   }, [clientForm]);
 
@@ -204,15 +204,15 @@ function QuickAddClient({ editForm }) {
           ) : (
             <input
               autoComplete="nope"
-              placeholder="GST"
+              placeholder="GSTIN"
               className={
                 !validForm.GST && isTouched
                   ? defaultInputInvalidStyle
                   : defaultInputStyle
               }
               disabled={isInitLoading}
-              value={clientForm.GST}
-              onChange={(e) => handlerClientValue(e, "GST")}
+              value={clientForm.GSTIN}
+              onChange={(e) => handlerClientValue(e, "GSTIN")}
             />
           )}
         </div>

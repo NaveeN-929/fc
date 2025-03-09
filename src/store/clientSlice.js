@@ -14,7 +14,7 @@ const initialState = {
     email: "",
     billingAddress: "",
     mobileNo: "",
-    GST: "",
+    GSTIN: "",
 
   },
   editedID: null,
@@ -37,6 +37,7 @@ export const clientsSlice = createSlice({
         email: "",
         billingAddress: "",
         mobileNo: "",
+        GSTIN: "",
       };
 
       state.newForm = { ...reNewForm };

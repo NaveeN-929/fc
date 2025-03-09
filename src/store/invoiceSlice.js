@@ -40,6 +40,7 @@ const initialState = {
       email: "",
       image: "",
       billingAddress: "",
+      GSTIN: "",
     },
     products: [
       {

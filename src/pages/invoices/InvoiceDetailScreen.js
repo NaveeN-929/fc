@@ -812,8 +812,8 @@ function InvoiceDetailScreen(props) {
                       autoComplete="nope"
                       placeholder="Client GSTIN"
                       className={defaultInputSmStyle}
-                      value={invoiceForm?.clientDetail?.gst}
-                      onChange={(e) => handlerInvoiceClientValue(e, "gst")}
+                      value={invoiceForm?.clientDetail?.GSTIN}
+                      onChange={(e) => handlerInvoiceClientValue(e, "GSTIN")}
                     />
                   ) : (
                     invoiceForm?.clientDetail?.email
