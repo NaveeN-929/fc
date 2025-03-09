@@ -1332,7 +1332,8 @@ function InvoiceDetailScreen(props) {
                 </div>
                 <div className="font-title w-full sm:w-1/4 text-right sm:pr-8 flex flex-row sm:block mb-1">
                   <Button size="sm" block={1} onClick={addEmptyTax}>
-                    <DollarIcon style={IconStyle} className="w-5 h-5" />
+                    {/* <DollarIcon style={IconStyle} className="w-5 h-5" /> */}
+                    <span style={IconStyle} className="w-4 h-4">₹</span>
                     Add Extra Fee
                   </Button>
                 </div>

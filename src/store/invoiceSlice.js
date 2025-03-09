@@ -32,7 +32,7 @@ const initialState = {
     backgroundImage: imageData[0],
     dueDate: new Date(),
     createdDate: new Date(),
-    currencyUnit: "$",
+    currencyUnit: "₹",
     clientDetail: {
       id: "",
       name: "",
