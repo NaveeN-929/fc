@@ -22,15 +22,15 @@ import {
   updateNewClientFormField,
 } from "../../store/clientSlice";
 
-const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+// const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 const emptyForm = {
   id: "",
   image: "",
   name: "",
-  email: "",
+  // email: "",
   billingAddress: "",
-  mobileNo: "",
+  // mobileNo: "",
   GSTIN:"",
 };
 
@@ -101,16 +101,16 @@ function QuickAddClient({ editForm }) {
   }, [clientForm]);
 
   useEffect(() => {
-    const isValidEmail =
-      clientForm?.email?.trim() && clientForm?.email.match(emailRegex);
+    // const isValidEmail =
+    //   clientForm?.email?.trim() && clientForm?.email.match(emailRegex);
 
     setValidForm((prev) => ({
       id: true,
       image: true,
       name: clientForm?.name?.trim() ? true : false,
-      email: isValidEmail ? true : false,
+      // email: isValidEmail ? true : false,
       billingAddress: clientForm?.billingAddress?.trim() ? true : false,
-      mobileNo: clientForm?.mobileNo?.trim() ? true : false,
+      // mobileNo: clientForm?.mobileNo?.trim() ? true : false,
       GSTIN: clientForm?.GSTIN?.trim() ? true : false,
     }));
   }, [clientForm]);
@@ -157,7 +157,7 @@ function QuickAddClient({ editForm }) {
           )}
         </div>
       </div>
-      <div className="flex mt-2">
+      {/* <div className="flex mt-2">
         <div className="flex-1">
           {isInitLoading ? (
             <Skeleton className={defaultSkeletonNormalStyle} />
@@ -176,8 +176,8 @@ function QuickAddClient({ editForm }) {
             />
           )}
         </div>
-      </div>
-      <div className="flex mt-2">
+      </div> */}
+      {/* <div className="flex mt-2">
         <div className="flex-1">
           {isInitLoading ? (
             <Skeleton className={defaultSkeletonNormalStyle} />
@@ -196,7 +196,7 @@ function QuickAddClient({ editForm }) {
             />
           )}
         </div>
-        </div>
+        </div> */}
       <div className="flex mt-2">
         <div className="flex-1">
           {isInitLoading ? (

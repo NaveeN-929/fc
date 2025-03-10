@@ -21,13 +21,13 @@ const emptyForm = {
   id: "",
   image: "",
   name: "",
-  email: "",
+  // email: "",
   billingAddress: "",
-  mobileNo: "",
+  // mobileNo: "",
   GSTIN: "",
 };
 
-const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+// const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 function ClientEditModal(props) {
   const dispatch = useDispatch();
@@ -92,16 +92,16 @@ function ClientEditModal(props) {
   }, [clientForm]);
 
   useEffect(() => {
-    const isValidEmail =
-      clientForm?.email?.trim() && clientForm?.email.match(emailRegex);
+    // const isValidEmail =
+    //   clientForm?.email?.trim() && clientForm?.email.match(emailRegex);
 
     setValidForm((prev) => ({
       id: true,
       image: true,
       name: clientForm?.name?.trim() ? true : false,
-      email: isValidEmail ? true : false,
+      // email: isValidEmail ? true : false,
       billingAddress: clientForm?.billingAddress?.trim() ? true : false,
-      mobileNo: clientForm?.mobileNo?.trim() ? true : false,
+      // mobileNo: clientForm?.mobileNo?.trim() ? true : false,
       GSTIN: clientForm?.GSTIN?.trim() ? true : false,
     }));
   }, [clientForm]);
@@ -175,7 +175,7 @@ function ClientEditModal(props) {
                             />
                           </div>
                         </div>
-                        <div className="flex mt-2">
+                        {/* <div className="flex mt-2">
                           <div className="flex-1">
                             <input
                               autoComplete="nope"
@@ -189,8 +189,8 @@ function ClientEditModal(props) {
                               onChange={(e) => handlerClientValue(e, "email")}
                             />
                           </div>
-                        </div>
-                        <div className="flex mt-2">
+                        </div> */}
+                        {/* <div className="flex mt-2">
                           <div className="flex-1">
                             <input
                               autoComplete="nope"
@@ -223,20 +223,20 @@ function ClientEditModal(props) {
                               }
                             />
                           </div>
-                          </div>
+                          </div> */}
                         <div className="flex mt-2">
                           <div className="flex-1">
                             <input
                               autoComplete="nope"
-                              placeholder="gst"
+                              placeholder="GSTIN"
                               className={
-                                !validForm.gst && isTouched
+                                !validForm.GSTIN && isTouched
                                   ? defaultInputInvalidStyle
                                   : defaultInputStyle
                               }
-                              value={clientForm.gst}
+                              value={clientForm.GSTIN}
                               onChange={(e) =>
-                                handlerClientValue(e, "gst")
+                                handlerClientValue(e, "GSTIN")
                               }
                             />
                           </div>

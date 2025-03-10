@@ -11,9 +11,9 @@ const initialState = {
     id: nanoid(),
     image: "",
     name: "",
-    email: "",
+    // email: "",
     billingAddress: "",
-    mobileNo: "",
+    // mobileNo: "",
     GSTIN: "",
 
   },
@@ -34,9 +34,9 @@ export const clientsSlice = createSlice({
         id: nanoid(),
         image: "",
         name: "",
-        email: "",
+        // email: "",
         billingAddress: "",
-        mobileNo: "",
+        // mobileNo: "",
         GSTIN: "",
       };
 

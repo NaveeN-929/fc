@@ -36,8 +36,8 @@ const initialState = {
     clientDetail: {
       id: "",
       name: "",
-      mobileNo: "",
-      email: "",
+      // mobileNo: "",
+      // email: "",
       image: "",
       billingAddress: "",
       GSTIN: "",

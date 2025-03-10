@@ -768,7 +768,7 @@ function InvoiceDetailScreen(props) {
                     invoiceForm?.clientDetail?.billingAddress
                   )}
                 </div>
-                <div
+                {/* <div
                   className={
                     "font-medium " + (isExporting ? "text-xs" : "text-sm mb-1")
                   }
@@ -784,8 +784,8 @@ function InvoiceDetailScreen(props) {
                   ) : (
                     invoiceForm?.clientDetail?.mobileNo
                   )}
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   className={
                     "font-medium " + (isExporting ? "text-xs" : "text-sm mb-1")
                   }
@@ -801,7 +801,7 @@ function InvoiceDetailScreen(props) {
                   ) : (
                     invoiceForm?.clientDetail?.email
                   )}
-                </div>
+                </div> */}
                 <div
                   className={
                     "font-medium " + (isExporting ? "text-xs" : "text-sm mb-1")
@@ -816,7 +816,7 @@ function InvoiceDetailScreen(props) {
                       onChange={(e) => handlerInvoiceClientValue(e, "GSTIN")}
                     />
                   ) : (
-                    invoiceForm?.clientDetail?.email
+                    invoiceForm?.clientDetail?.GSTIN
                   )}
                 </div>
               </div>
