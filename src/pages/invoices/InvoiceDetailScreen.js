@@ -625,32 +625,31 @@ function InvoiceDetailScreen(props) {
     ];
     const b = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
     const g = ["", "Thousand", "Million", "Billion", "Trillion"];
-  
+
     if (num === 0) return "Zero Rupees Only";
     if (typeof num === "number") num = String(num);
-  
+
     // Function to convert three-digit numbers to words
     const makeGroup = (num) => {
       let [huns, tens, ones] = num.padStart(3, "0").split("").map(Number);
-  
+
       return [
         huns ? a[huns] + " Hundred" : "",
         tens >= 2 ? b[tens] + (ones ? "-" + a[ones] : "") : a[tens * 10 + ones] || a[ones]
       ].filter(Boolean).join(" ");
     };
-  
+
     // Split into groups of 3 from the RIGHT side
     let numGroups = [];
     while (num.length > 0) {
       numGroups.unshift(num.slice(-3)); // Take last 3 digits
       num = num.slice(0, -3); // Remove last 3 digits
     }
-  
+
     return numGroups
       .map(makeGroup)
       .map((group, i) => (group ? `${group} ${g[numGroups.length - 1 - i]}`.trim() : ""))
-      .filter(Boolean)
-      .join(" ") + " Rupees Only";
+      .filter(Boolean).join(" ") + " Rupees Only";
   };
   return (
     <div>
@@ -1144,9 +1143,9 @@ function InvoiceDetailScreen(props) {
                         Number.isInteger(product.quantity * product.amount)
                           ? product.quantity * product.amount
                           : (product.quantity * product.amount)
-                              .toFixed(4)
-                              .toString()
-                              .slice(0, -2)
+                            .toFixed(4)
+                            .toString()
+                            .slice(0, -2)
                       }
                       className=""
                       displayType={"text"}
@@ -1442,28 +1441,25 @@ function InvoiceDetailScreen(props) {
             <div className="font-title text-lg">Amount in words:  {numberToWords(invoiceForm?.totalAmount)}
             </div>
           </div>
-          {/* Remark */}
-          {/* <div className="px-4 py-2">
-            <div className="font-title text-lg">Remark:</div>
+          {/* Bank Details and Signature */}
+          <div className="px-4 py-2 flex flex-col sm:flex-row justify-between items-start">
             <div className="text-sm">
-              <textarea
-                className={defaultInputSmStyle + " w-full"}
-                placeholder="Add any remarks here"
-                rows="3"
-                value={invoiceForm?.remark || ""}
-                onChange={(e) => handlerInvoiceValue(e, "remark")}
-              />
-            </div>
-          </div> */}
-          {/* Bank Details */}
-          <div className="px-4 py-2">
-            <div className="font-title text-lg">Bank Details:</div>
-            <div className="text-sm">
+              <div className="font-title text-lg">Bank Details:</div>
               <p>Bank Name: {invoiceForm?.companyDetail?.bankName || "UNION BANK OF INDIA"}</p>
               <p>A/c. Name : {invoiceForm?.companyDetail?.accountName || "FRIENDS CARRIER"}</p>
               <p>A/c. Number: {invoiceForm?.companyDetail?.accountNumber || "454701010036373"}</p>
               <p>Branch: {invoiceForm?.companyDetail?.branch || "Vijanapura Branch"}</p>
               <p>IFSC Code: {invoiceForm?.companyDetail?.ifscCode || "UBIN0545473"}</p>
+            </div>
+            <div className="text-center mt-4 sm:mt-0">
+              <div className="font-title text-lg">For FRIENDS CARRIER</div>
+              <img
+                src="/images/seal.png"
+                alt="Company Seal"
+                className="w-32 h-32 mx-auto mb-4"
+              />
+              <div className="border-t border-black w-48 mx-auto"></div>
+              <div className="font-title text-sm mt-2">Authorized Signature</div>
             </div>
           </div>
         </div>
