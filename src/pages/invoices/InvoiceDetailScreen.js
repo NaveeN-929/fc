@@ -1475,10 +1475,10 @@ function InvoiceDetailScreen(props) {
                     outlined={1}
                     size="sm"
                     block={1}
-                    secondary={1}
+                    secondary={0}
                     onClick={() => saveAs("Draft")}
                   >
-                    <CheckCircleIcon className="h-5 w-5 mr-1" /> Save As Draft
+                    <CheckCircleIcon className="h-3 w-3 mr-1"/> Save As Draft
                   </Button>
                 </div>
               )}
@@ -1488,7 +1488,7 @@ function InvoiceDetailScreen(props) {
                     outlined={1}
                     size="sm"
                     block={1}
-                    danger={1}
+                    danger={0}
                     onClick={() => saveAs("Unpaid")}
                   >
                     <DollarIcon className="h-5 w-5 mr-1" />{" "}

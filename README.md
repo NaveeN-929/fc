@@ -33,12 +33,3 @@ yarn build  # or npm run build
 ```
 This will create an optimized production build in the `build/` directory.
 
-## Deployment
-Refer to the [deployment guide](https://facebook.github.io/create-react-app/docs/deployment) for various deployment options.
-
-## Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
-
-## License
-MIT License
-
