@@ -1445,9 +1445,9 @@ function InvoiceDetailScreen(props) {
           <div className="px-4 py-2 flex flex-col sm:flex-row justify-between items-start">
             <div className="text-sm">
               <div className="font-title text-lg">Bank Details:</div>
-              <p>Bank Name: {invoiceForm?.companyDetail?.bankName || "UNION BANK OF INDIA"}</p>
               <p>A/c. Name : {invoiceForm?.companyDetail?.accountName || "FRIENDS CARRIER"}</p>
               <p>A/c. Number: {invoiceForm?.companyDetail?.accountNumber || "454701010036373"}</p>
+              <p>Bank Name: {invoiceForm?.companyDetail?.bankName || "UNION BANK OF INDIA"}</p>
               <p>Branch: {invoiceForm?.companyDetail?.branch || "Vijanapura Branch"}</p>
               <p>IFSC Code: {invoiceForm?.companyDetail?.ifscCode || "UBIN0545473"}</p>
             </div>
