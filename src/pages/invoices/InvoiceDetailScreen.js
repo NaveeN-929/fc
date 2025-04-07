@@ -1456,10 +1456,10 @@ function InvoiceDetailScreen(props) {
               <img
                 src="/images/seal.png"
                 alt="Company Seal"
-                className="w-32 h-32 mx-auto mb-4"
+                className="w-32 h-32 mx-auto"
               />
               <div className="border-t border-black w-48 mx-auto"></div>
-              <div className="font-title text-sm mt-2">Authorized Signature</div>
+              <div className="font-title text-sm">Authorized Signature</div>
             </div>
           </div>
         </div>
