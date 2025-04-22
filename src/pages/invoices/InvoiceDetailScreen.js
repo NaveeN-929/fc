@@ -888,7 +888,7 @@ function InvoiceDetailScreen(props) {
                     onChange={(date) =>
                       handlerInvoiceValue(date.toISOString(), "createdDate")
                     }
-                    disabled={true}
+                    disabled={isViewMode} // Allow editing when not in view mode
                     className={
                       !isViewMode
                         ? defaultInputSmStyle + " border-gray-300 text-right"
@@ -1413,7 +1413,7 @@ function InvoiceDetailScreen(props) {
                     isExporting
                       ? "font-title text-lg w-1/2 text-right pr-9 flex flex-row block  justify-end items-center"
                       : "font-title text-lg w-1/2 text-right sm:pr-9 flex flex-row justify-end sm:block items-center"
-                  }
+                }
                 >
                   <NumberFormat
                     value={invoiceForm?.totalAmount}
